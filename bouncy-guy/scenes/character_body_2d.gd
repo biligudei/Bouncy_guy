@@ -1,25 +1,36 @@
 extends CharacterBody2D
 
+# Horizontal movement speed in pixels per second.
+@export var speed := 300.0
 
-const SPEED = 300.0
-const JUMP_VELOCITY = -400.0
+# Pulls the character down so it stays on the ground (platformer style).
+var gravity: float = ProjectSettings.get_setting("physics/2d/default_gravity")
+
+# Which way the character last faced: "right" or "left".
+var _facing := "right"
+
+@onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
 
 
 func _physics_process(delta: float) -> void:
-	# Add the gravity.
+	# Apply gravity while in the air.
 	if not is_on_floor():
-		velocity += get_gravity() * delta
+		velocity.y += gravity * delta
 
-	# Handle jump.
-	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
-		velocity.y = JUMP_VELOCITY
-
-	# Get the input direction and handle the movement/deceleration.
-	# As good practice, you should replace UI actions with custom gameplay actions.
-	var direction := Input.get_axis("ui_left", "ui_right")
-	if direction:
-		velocity.x = direction * SPEED
-	else:
-		velocity.x = move_toward(velocity.x, 0, SPEED)
+	# -1 for left, 1 for right, 0 for neither (also works with analog sticks).
+	var direction := Input.get_axis("left", "right")
+	velocity.x = direction * speed
 
 	move_and_slide()
+	_update_animation(direction)
+
+
+func _update_animation(direction: float) -> void:
+	if direction > 0:
+		_facing = "right"
+		animated_sprite.play("walk_right")
+	elif direction < 0:
+		_facing = "left"
+		animated_sprite.play("walk_left")
+	else:
+		animated_sprite.play("idle_" + _facing)
