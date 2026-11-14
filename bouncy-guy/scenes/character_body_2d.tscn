@@ -67,6 +67,14 @@ region = Rect2(396, 0, 64, 66)
 atlas = ExtResource("2_g2brh")
 region = Rect2(462, 0, 64, 66)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_u7bf1"]
+atlas = ExtResource("2_g2brh")
+region = Rect2(330, 858, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mmnpi"]
+atlas = ExtResource("2_g2brh")
+region = Rect2(330, 792, 64, 64)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_g2brh"]
 atlas = ExtResource("2_g2brh")
 region = Rect2(0, 858, 64, 64)
@@ -222,7 +230,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_mfdas")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"idle_left",
 "speed": 7.0
 }, {
@@ -251,9 +259,25 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_ugk0l")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"idle_right",
 "speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u7bf1")
+}],
+"loop": 1,
+"name": &"roll_idle_left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mmnpi")
+}],
+"loop": 1,
+"name": &"roll_idle_right",
+"speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -262,7 +286,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_teyxv")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"roll_in_left",
 "speed": 3.0
 }, {
@@ -273,7 +297,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_m8ak6")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"roll_in_right",
 "speed": 3.0
 }, {
@@ -290,7 +314,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_nda51")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"roll_left",
 "speed": 5.0
 }, {
@@ -301,7 +325,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_jyxh6")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"roll_out_left",
 "speed": 3.0
 }, {
@@ -312,7 +336,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_ri7g2")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"roll_out_right",
 "speed": 3.0
 }, {
@@ -329,7 +353,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_acjr4")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"roll_right",
 "speed": 5.0
 }, {
@@ -358,7 +382,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_7oyl4")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"walk_left",
 "speed": 7.0
 }, {
@@ -387,7 +411,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_r8tdc")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"walk_right",
 "speed": 7.0
 }]
@@ -402,8 +426,7 @@ script = ExtResource("1_g2brh")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1149697755]
 visibility_layer = 3
 sprite_frames = SubResource("SpriteFrames_5h11f")
-animation = &"walk_right"
-frame_progress = 0.19033638
+animation = &"roll_idle_right"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2031137352]
 visible = false
