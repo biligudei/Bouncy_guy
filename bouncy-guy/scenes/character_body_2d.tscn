@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://dscxbt2ew3ghf"]
 
+[ext_resource type="Script" uid="uid://8yc6pecba8dp" path="res://scenes/character_body_2d.gd" id="1_g2brh"]
 [ext_resource type="Texture2D" uid="uid://2kljdke3epuv" path="res://assets/SPRITEsss.png" id="1_lj8jo"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_g2brh"]
@@ -123,8 +124,20 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5h11f"]
+radius = 9.0
+height = 44.0
+
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=295090739]
+script = ExtResource("1_g2brh")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1149697755]
 sprite_frames = SubResource("SpriteFrames_5h11f")
-animation = &"walk_right"
+animation = &"idle_left"
+autoplay = "idle_left"
+frame = 1
+frame_progress = 0.2193728
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2031137352]
+position = Vector2(0, 6)
+shape = SubResource("CapsuleShape2D_5h11f")
