@@ -3,7 +3,7 @@ extends CharacterBody2D
 # Horizontal movement speed in pixels per second.
 @export var speed := 300.0
 #made for idkkkk
-
+#hahagsajHGHJSGjs
 # Pulls the character down so it stays on the ground (platformer style).
 var gravity: float = ProjectSettings.get_setting("physics/2d/default_gravity")
 
