@@ -29,7 +29,7 @@ extends CharacterBody2D
 @onready var hunger_bar: Range = $Camera2D/HungerBar
 @export var max_hunger := 100.0
 @export var hunger_tick_time := 1.0
-@export var hunger_drain_amount := 1.0
+@export var hunger_drain_amount := 2.25
 @export var respawn_delay := 2.0
 
 # If the player falls below this Y position, they die.

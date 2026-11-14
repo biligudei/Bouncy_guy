@@ -8,7 +8,7 @@
 
 [node name="burger" type="Area2D" unique_id=851263769]
 script = ExtResource("1_dl81w")
-hunger_restore = 5.0
+hunger_restore = 8.0
 eat_sound = ExtResource("2_5rgpn")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1597666427]

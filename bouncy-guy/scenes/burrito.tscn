@@ -8,7 +8,7 @@
 
 [node name="burrito" type="Area2D" unique_id=1552784286]
 script = ExtResource("1_qorn4")
-hunger_restore = 7.0
+hunger_restore = 8.0
 eat_sound = ExtResource("2_6nvjp")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1188595845]

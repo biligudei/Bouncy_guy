@@ -9,7 +9,7 @@ radius = 8.0
 
 [node name="choco" type="Area2D" unique_id=1970546958]
 script = ExtResource("1_bkvf4")
-hunger_restore = 6.0
+hunger_restore = 8.0
 eat_sound = ExtResource("2_c2jhm")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=911361638]
