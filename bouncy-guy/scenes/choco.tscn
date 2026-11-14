@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://c53c3tg83i1vm"]
+
+[ext_resource type="Script" uid="uid://dtmp3s61og54i" path="res://food.gd" id="1_bkvf4"]
+[ext_resource type="Texture2D" uid="uid://500wv2tiijbh" path="res://assets/walls/30_chocolatecake.png" id="1_wj5wk"]
+[ext_resource type="AudioStream" uid="uid://b42cyfx0t8el1" path="res://assets/walls/ScreenRecording_11-14-2026 15-17-18_1.mp3" id="2_c2jhm"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_5h11f"]
+radius = 8.0
+
+[node name="choco" type="Area2D" unique_id=1970546958]
+script = ExtResource("1_bkvf4")
+hunger_restore = 6.0
+eat_sound = ExtResource("2_c2jhm")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=911361638]
+texture = ExtResource("1_wj5wk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2001317149]
+shape = SubResource("CircleShape2D_5h11f")

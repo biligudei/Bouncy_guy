@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://mbqq2ynje1ed"]
+
+[ext_resource type="Script" uid="uid://dtmp3s61og54i" path="res://food.gd" id="1_dl81w"]
+[ext_resource type="Texture2D" uid="uid://e08mm5skj5ac" path="res://assets/walls/15_burger.png" id="1_gf172"]
+[ext_resource type="AudioStream" uid="uid://b42cyfx0t8el1" path="res://assets/walls/ScreenRecording_11-14-2026 15-17-18_1.mp3" id="2_5rgpn"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_5h11f"]
+
+[node name="burger" type="Area2D" unique_id=851263769]
+script = ExtResource("1_dl81w")
+hunger_restore = 5.0
+eat_sound = ExtResource("2_5rgpn")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1597666427]
+texture = ExtResource("1_gf172")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1909234041]
+shape = SubResource("CircleShape2D_5h11f")

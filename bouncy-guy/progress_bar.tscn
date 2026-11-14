@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://0b12n4wpmmx7"]
+
+[node name="ProgressBar" type="ProgressBar" unique_id=563241837]
+anchors_preset = -1
+anchor_right = 0.003
+offset_right = 1432.544
+offset_bottom = 86.0
+max_value = 15.0
+value = 15.0

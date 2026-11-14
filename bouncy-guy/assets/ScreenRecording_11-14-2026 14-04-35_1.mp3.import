@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://beixfmkn32qe6"
+path="res://.godot/imported/ScreenRecording_11-14-2026 14-04-35_1.mp3-8d247dd39365a3548164f71535140397.mp3str"
+
+[deps]
+
+source_file="res://assets/ScreenRecording_11-14-2026 14-04-35_1.mp3"
+dest_files=["res://.godot/imported/ScreenRecording_11-14-2026 14-04-35_1.mp3-8d247dd39365a3548164f71535140397.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
